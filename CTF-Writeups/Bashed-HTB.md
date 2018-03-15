@@ -1,14 +1,6 @@
-[Main Page](../index.html) \| [Blog](https://github.com/berzerk0/GitPage/wiki/Post-Listing) \| [CTF Writeups](../CTF-Writeups/CTF-index.html) \| [How-To Guides](../How-To-Guides/HowTo-index.html) <br>
+[Back to Main Page](../index.html) 
 
-
-# CTF Writeup:
-# Blocky on HackTheBox
-
-<br>
-![a0-logo](https://i.imgur.com/Y0d03Mo.png)
-<br>
-
-## 9 December 2017
+# Bashed on HackTheBox
 
 
 
@@ -16,40 +8,34 @@
 
 ## Introduction
 
-
-Blocky is a fun beginner's box that was probably the second or third CTF I ever attempted. When I tried it, I had booted up Kali and knew that a couple tools existed, but did not have any strategies, context or experience. All the boxes I had solved so far had used default passwords or simply were CVE-2017-0144 insta-rooted in Metasploit.
-
-
-This box will begin to give you a good understanding of the power of the tools at your disposal. By stumbling around trying out tools that I saw were part of the Kali suite, I began to figure the important concepts and found myself learning very quickly.
-
-
-If you have never tried a CTF before, this box would be a nice place to start - assuming you can get past the HackTheBox Invite process.
+Bashed is a beginner's box which was the first CTF I ever attempted. When I tried it, I had booted up Kali and knew that a couple tools existed, but did not have any strategies, context or experience. 
 
 This write up assumes that the reader is using Kali, but any pentesting distro such as [BlackArch](https://blackarch.org/) will work. The tools come with a stock Kali installation, unless otherwise mentioned.
 
-
 ## 1. Initial Scanning
 
-All HackTheBox CTFs are black-box. All we have is an IP. IPs should be scanned with nmap.
+All we do have is an IP so we start to run a nmap scan.
 
-Nowadays, I run a custom `nmap` based script to do my recon. However, I did this box way back in the prehistoric ages (earlier this year) and didn't have the skill yet to do something like that. We can also find everything we need using this simple command.
+`nmap 10.10.10.68`
 
-`nmap -sV -T4 10.10.10.37`
+![1nmap](https://i.imgur.com/fyklCXk.png)
 
-* The `-sV` flag attempts to tell us the software used on each port found
-* The `-T4` flag tells nmap to use more CPU threads, and thus run faster
+nmap did find TCP port 80.
 
-![a1-nmap](https://i.imgur.com/Hm6cYkB.png)
+Kali catogorizes most of the HTTP tools under "Web Application Analysis," so I took a peek and tried to get one of them working. I found the most useful starting commands for a website CTF is `nikto`
+
+`nikto -h http://10.10.10.68:80`
+
+Our `-h` flag tells nikto the location of our target. 
+
+![1nikto](https://i.imgur.com/h1r2hqi.png)
+
+Nikto shows us many intersting directories - one of them being /dev/. So I connected on it and found those .php scripts.
+
+![2nikto](https://i.imgur.com/tupNPIp.png)
 
 
-nmap finds 21, 22, and 80. These are the default ports for FTP, SSH and HTTP.  It also finds 8192, but we can come back to that later if we stall. I like to start with HTTP.
 
-Kali categorizes most of the HTTP tools under "Web Application Analysis," so I took a peek and tried to get most of them working. Since starting out, I found that my most useful starting commands for a website CTF are `nikto` and `dirsearch`
-
-
-`nikto -h http://10.10.10.37 -output nikto_blocky.txt`
-
-Our `-h` flag tells nikto the location of our target, and the `-output` flag creates an easily revisited log of our results.
 
 
 ![a2-nikto](https://i.imgur.com/XHOA47W.png)
