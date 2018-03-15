@@ -81,6 +81,7 @@ We then execute the monitor.sh file with /usr/bin/sudo and receive our root shel
 ![3ctf](https://i.imgur.com/J05iDMS.png)
 
 `cat root.txt` - system flag captured!
+
 `cat /home/nibbles/user.txt` - user flag captured!
 
 ## 8. Cleanup
