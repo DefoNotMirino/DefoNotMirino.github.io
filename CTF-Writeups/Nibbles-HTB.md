@@ -39,7 +39,7 @@ Before trying to break into it, always try some defaults.
 
 Easy-Peasy.
 
-admin:nibbles
+`admin:nibbles`
 
 ![1break](https://i.imgur.com/17wiJUm.png)
 
