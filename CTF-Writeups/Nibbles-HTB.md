@@ -31,9 +31,6 @@ Therefore we use nibble against /nibbleblog/. DIRB is a Web Content Scanner.
 
 It shows admin.php, which is an login interface.
 
-![1adm](https://i.imgur.com/undefined.png)
-
-
 ## 2. Using the basics to get access
 
 Before trying to break into it, always try some defaults. admin:nibbles
