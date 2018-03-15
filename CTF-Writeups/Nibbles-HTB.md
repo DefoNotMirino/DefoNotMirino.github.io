@@ -25,6 +25,7 @@ Due this we check out the webpage and look closer at the source code.
 
 Intersting. /nibbleblog/
 Therefore we use nibble against /nibbleblog/. DIRB is a Web Content Scanner.
+
 `dirb http://10.10.10.75/nibbleblog/`
 
 ![1source](https://i.imgur.com/lYBc5oS.png)
@@ -37,13 +38,20 @@ Before trying to break into it, always try some defaults. admin:nibbles
 
 ![1break](https://i.imgur.com/17wiJUm.png)
 
-We're in! After a while of searching I decided to check for exploits. We just searched for nibble. 
+We're in! 
+After a while of searching the webinterface and not getting any further I decided to check for exploits. 
+I looked up for any exploit with nibble in it and GOTCHA.  
  
 `searchsploit nibble`
 
 ![1search](https://i.imgur.com/rFxtQsi.png)
 
+Of course, I used the metasploit exploit, so I called in the msf console.
+
 ## 3. Exploit
+
+The Metasploit Project is well known for its anti-forensic and evasion tools, some of which are built into the Metasploit Framework.
+Metasploit currently has over 1677 exploits, organized under the following platforms: AIX, android, bsd, bsdi, cisco, firefox, freebsd, hpux, irix, java, javascript, linux, mainframe, multi (applicable to multiple platforms), netbsd, netware, nodejs, openbsd, osx, php, python, R, ruby, solaris, unix, and windows.
 
 ![1splot](https://i.imgur.com/CISJNvpg.png)
 
