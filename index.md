@@ -1,37 +1,15 @@
-## Welcome to GitHub Pages
+## Projects and Tools
 
-You can use the [editor on GitHub](https://github.com/DefoNotMirino/DefoNotMirino.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+* [Probable Wordlists](https://github.com/berzerk0/Probable-Wordlists) - Wordlists sorted by popularity. For password generation and testing
+* [BEWGor](https://github.com/berzerk0/BEWGor) - Bull's Eye Wordlist Generator
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## CTF Write Ups
 
-```markdown
-Syntax highlighted code block
+These aren't the only CTF's I've ever done, of course.
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+* [Optimum on HackTheBox](CTFWRITE-Optimum-HTB.md) - 30 October 2017
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/DefoNotMirino/DefoNotMirino.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
