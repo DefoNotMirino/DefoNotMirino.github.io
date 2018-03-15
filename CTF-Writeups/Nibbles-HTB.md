@@ -19,6 +19,7 @@ As usual we only have the IP so we start an nmap scan.
 ![1nmap](https://i.imgur.com/2rih64N.png)
 
 nmap did find SSH and Port 80.
+
 Due this we check out the webpage and look closer at the source code.
 
 ![1source](https://i.imgur.com/lYBc5oS.png)
@@ -35,13 +36,17 @@ It shows admin.php, which is an login interface.
 ## 2. Using the basics to get access
 
 Before trying to break into it, always try some defaults. 
+
 Easy-Peasy.
+
 admin:nibbles
 
 ![1break](https://i.imgur.com/17wiJUm.png)
 
 We're in! 
+
 After a while of searching the webinterface and not getting any further I decided to check for exploits. 
+
 I looked up for any exploit with nibble in it and GOTCHA.  
  
 `searchsploit nibble`
@@ -65,6 +70,7 @@ After that we fired it up.
 ## 4. Capturing the Flag
 
 Somebody left the flag after exploiting the monitor.sh in the /tmp/ folder, but I wanted to get it for real myself.
+
 I found a zip within home/nibbler with a monitor.sh in it.
 To de-zip, or execute files you always have to call the `shell` first.
 
@@ -89,6 +95,7 @@ We then execute the monitor.sh file with /usr/bin/sudo and receive our root shel
 ## 8. Cleanup
  
 Firstup I cleaned the whole /tmp/ folder to make it harder for future players. 
+
 Since this is a CTF, cleanup isn’t mandatory.
 However, we want to develop good habits and operational security practice. Meterpreter has a `clearev` command that can be used to cover our tracks - let’s run it and be out of here.
 
