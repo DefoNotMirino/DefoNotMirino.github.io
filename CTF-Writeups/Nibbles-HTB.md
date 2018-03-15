@@ -48,7 +48,7 @@ We're in! After a while of searching I decided to check for exploits. We just se
 
 ## 2. Exploit
 
-![1splot](https://i.imgur.com/undefined.png)
+![1splot](https://i.imgur.com/CISJNvpg.png)
 
 Setup the exploit. Additional we set the Listerner LHOST to our IP and LPORT to 4000.
 After that we fired it up.
