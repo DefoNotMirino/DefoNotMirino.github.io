@@ -10,7 +10,6 @@
 These aren't the only CTF's I've ever done, of course.
 
 
-* [Optimum on HackTheBox](CTFWRITE-Optimum-HTB.md) - 30 October 2017
-* [Bashed on HackTheBock](CTF-Writeups/Bashed-HTB.md) - 15 März 2018
+* [Nibbles on HackTheBock](CTF-Writeups/Nibbles-HTB.md) - 15 März 2018
 
 
