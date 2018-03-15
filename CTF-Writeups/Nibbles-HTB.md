@@ -23,18 +23,20 @@ Due this we check out the webpage and look closer at the source code.
 
 ![1source](https://i.imgur.com/lYBc5oS.png)
 
-Intersting. /nibbleblog/
-Therefore we use nibble against /nibbleblog/. DIRB is a Web Content Scanner.
+Interesting. /nibbleblog/
+Therefore we use DIRB against /nibbleblog/. DIRB is a Web Content Scanner.
 
 `dirb http://10.10.10.75/nibbleblog/`
 
-![1source](https://i.imgur.com/lYBc5oS.png)
+![1source](https://i.imgur.com/p566uDd.png)
 
 It shows admin.php, which is an login interface.
 
 ## 2. Using the basics to get access
 
-Before trying to break into it, always try some defaults. admin:nibbles
+Before trying to break into it, always try some defaults. 
+Easy-Peasy.
+admin:nibbles
 
 ![1break](https://i.imgur.com/17wiJUm.png)
 
