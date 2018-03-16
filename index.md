@@ -1,7 +1,5 @@
 ## About
 
-- Cyber/Infosec 
-
 - Convincing people 'password' is not a good password -
 
 - Meme Artist
@@ -9,7 +7,7 @@
 
 ## Projects and Tools
 
-
+* [PenTesting Cheat Sheet](PenTesting Cheat Sheet.md)
 
 ## CTF Write Ups
 
