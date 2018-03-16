@@ -1,7 +1,13 @@
-## Projects and Tools
+## About
 
-* [Probable Wordlists](https://github.com/berzerk0/Probable-Wordlists) - Wordlists sorted by popularity. For password generation and testing
-* [BEWGor](https://github.com/berzerk0/BEWGor) - Bull's Eye Wordlist Generator
+- Cyber/Infosec 
+
+- Convincing people 'password' is not a good password -
+
+- Meme Artist
+
+
+## Projects and Tools
 
 
 
