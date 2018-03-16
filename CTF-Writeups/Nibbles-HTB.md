@@ -3,6 +3,7 @@
 # Nibbles on HackTheBox
 
 
+![htb](http://blog.mullineaux.com.au/content/images/2018/01/17434837_1109794339166352_2979213048164507581_o.png)
 
 
 
@@ -94,7 +95,7 @@ We then execute the monitor.sh file with /usr/bin/sudo and receive our root shel
 
 `cat /home/nibbles/user.txt` - user flag captured!
 
-## 8. Cleanup
+## 5. Cleanup
  
 Firstup I cleaned the whole /tmp/ folder to make it harder for future players. 
 
