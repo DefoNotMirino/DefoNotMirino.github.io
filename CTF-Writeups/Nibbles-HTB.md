@@ -102,7 +102,7 @@ Firstup I cleaned the whole /tmp/ folder to make it harder for future players.
 Since this is a CTF, cleanup isn’t mandatory.
 However, we want to develop good habits and operational security practice. Meterpreter has a `clearev` command that can be used to cover our tracks - let’s run it and be out of here.
 
-
+![hacked](https://cdn-images-1.medium.com/max/1600/1*TtuBByJ52bSP-d2WPOczJg.png)
 
 
 
