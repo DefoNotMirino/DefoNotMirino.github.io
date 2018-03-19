@@ -1,8 +1,7 @@
 ## About
 
-- Convincing people 'password' is not a good password -
-
-- Meme Artist
+- Seeing your network from the attacker's perspective
+- 'querty' is a bad password
 
 
 ## Projects and Tools
