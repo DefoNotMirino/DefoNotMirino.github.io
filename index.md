@@ -8,6 +8,7 @@
 ## Projects and Tools
 
 * [PenTesting Cheat Sheet](PaT/CheatSheet.md) - wip Cheat Sheet for PenTesting
+* [Decode Cheat Sheet](PaT/decode.md) - wip Cheat Sheet for PenTesting
 
 ## CTF Write Ups
 
