@@ -123,7 +123,7 @@ SNMP enumeration is the process of using SNMP to enumerate user accounts on a ta
 `snmp-check -t 192.168.1.2 -c public`   
 `snmpwalk -c public -v1 192.168.1.X 1| grep hrSWRunName|cut -d* * -f`   
 `snmpenum -t 192.168.1.X`   
-`onesixtyone -c names -i hosts`
+`onesixtyone -c names -i hosts`   
 Different SNMP Enumerations.
 
 `nmap -sV -p 161 --script=snmp-info TARGET-SUBNET`   
