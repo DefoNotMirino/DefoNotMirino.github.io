@@ -10,7 +10,7 @@ This penetration cheat sheet should be used as a quick reference overview for va
     - [Network Configuration](#network-configuration)
         - [Set IP Address](#set-ip-address)
         - [Subnetting](#subnetting)
-- [nformation Gathering](#information-gathering)
+- [Information Gathering](#information-gathering)
     - [DNS Enumeration](#dns-enumeration)
     - [Active Information Gathering](#active-information-gathering)
         - [DNS Bruteforce](#dns-bruteforce)
@@ -18,6 +18,10 @@ This penetration cheat sheet should be used as a quick reference overview for va
     - [Enumeration of Network Services](#enumeration-of-network-services)
         - [SMB SAMB Enumeration](#smb-samb-enumeration)
         - [LLMNR and NBT-NS Attack Spoofing](#llmnr-and-nbt-ns-attack-spoofing)
+        - [SNMP Enumeration](#snmp-enumeration)
+    - [TLS and SSL Testing](#tls-and-ssl-testing)        
+- [Penetration Tests](#penetration-tests)
+    - [Database Penetration](#database-penetration)
 
 
 # Pre-engagement
@@ -99,5 +103,37 @@ Test for Null Session on Windows Server 2000.
 
 ### LLMNR and NBT-NS Attack Spoofing
 
-LLMNR and NetBIOS are two name resolution services built in to Windows to help systems find address names from other devices on the network. 
+Steal credentials off the network. LLMNR and NetBIOS are two name resolution services built in to Windows to help systems find address names from other devices on the network. 
 
+`auxiliary/spoof/llmnr/llmnr_response`   
+`auxiliary/spoof/nbns/nbns_response`   
+Spoof / poison LLMNR / NetBIOS requests.
+
+`auxiliary/server/capture/smb`   
+`auxiliary/server/capture/http_ntlm`   
+Capture the hashes of LLMNR / NBT-NS. You’ll end up with NTLMv2 hash, use john or hashcat to crack it.
+
+### SNMP Enumeration
+
+SNMP enumeration is the process of using SNMP to enumerate user accounts on a target system. SNMP employs two major types of software components for communication: the SNMP agent, which is located on the networking device, and the SNMP management station, which communicates with the agent.
+
+`snmp-check -t 192.168.1.2 -c public`   
+`snmpwalk -c public -v1 192.168.1.X 1| grep hrSWRunName|cut -d* * -f`   
+`snmpenum -t 192.168.1.X`   
+`onesixtyone -c names -i hosts`
+Different SNMP Enumerations.
+
+`nmap -sV -p 161 --script=snmp-info TARGET-SUBNET`   
+SNMPv3 Enumeration.
+
+`/usr/share/metasploit-framework/data/wordlists/snmp_default_pass.txt`
+Metasploit's wordlist has common credentials for SNMPv1 and SNMPv2.
+
+## TLS and SSL Testing
+
+`./testssl.sh -e -E -f -p -y -Y -S -P -c -H -U TARGET-HOST | aha > OUTPUT-FILE.html`
+Test all options on a single host and output to a .html file.
+
+# Penetration Tests
+
+## Database Penetration
