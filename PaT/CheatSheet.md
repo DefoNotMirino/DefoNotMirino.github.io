@@ -56,15 +56,15 @@ DNS Recon via Kali Tools.
 
 ### Port Scanning
 
-`nmap -v -sS -A -T4 target`
+`nmap -v -sS -A -T4 target`   
 Nmap verbose scan, runs syn stealth, T4 timing (should be ok on LAN), OS and service version info, traceroute and scripts against services.
 
-`nmap -v -sS -p--A -T4 target`
+`nmap -v -sS -p--A -T4 target`   
 As above but scans all TCP ports (takes a lot longer).
 
-`nmap -v -sU -sS -p- -A -T4 target`
+`nmap -v -sU -sS -p- -A -T4 target`   
 As above but scans all TCP ports and UDP scan (takes even longer).
 
-`netdiscover -r 192.168.1.0/24`
+`netdiscover -r 192.168.1.0/24`   
 Discovers IP, MAC Address and MAC vendor on the subnet from ARP, helpful for confirming you're on the right VLAN at $client site.
 
