@@ -6,22 +6,26 @@ This tools cheat sheet should be used as a quick reference overview for various 
 
 **Table of Contents** 
 
-- [Pre-engagement](#pre-engagement)
-    - [Network Configuration](#network-configuration)
-        - [Set IP Address](#set-ip-address)
-        - [Subnetting](#subnetting)
+- [Steganography](#steganography)
+    - [Image Steganography](#image-steganography)
+        - [Show lower bits](#show-lower-bits)
+        - [Decode with key](#decode-with-key)
 
 
-# Pre-engagement
+# Steganography
 
-## Network Configuration
+## Image Steganography
 
-### Set IP Address
+### Show lower bits
 
-`ifconfig eth0 xxx.xxx.xxx.xxx/24 `
+`https://incoherency.co.uk/image-steganography/`
 
-### Subnetting
+This is a client-side Javascript tool to steganographically hide images inside the lower "bits" of other images.
 
-`ipcalc xxx.xxx.xxx.xxx/24`
+### Decode with key
 
-`ipcalc xxx.xxx.xxx.xxx 255.255.255.0`
+`https://futureboy.us/stegano/decinput.html`
+
+Show hidden flag with a key or blank key.
+
+
