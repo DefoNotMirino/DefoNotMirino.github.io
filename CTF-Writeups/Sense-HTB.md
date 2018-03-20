@@ -14,12 +14,13 @@ After over an hour I found something interesting.
 3
 
 /installer/system-users.txt   
-And there is the password and user. Rohit:pfsense as pfsense is the standard password.    
+And there is the password and user. Rohit:pfsense as pfsense is the standard password. 
+
+4
+
 AAAAND we're in already.
 
 
 
 
-
-`dirb https://10.10.10.60`
 
