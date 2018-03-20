@@ -15,7 +15,7 @@ Cheat sheets and more, currently work in process.
 
 These aren't the only CTF's I've ever done, of course.
 
-
+* [Sense on HackTheBox](CTF-Writeups/Sense-HTB.md) - 20 March 2018
 * [Bashed on HackTheBox](CTF-Writeups/Bashed-HTB.md) - 20 March 2018
 * [Nibbles on HackTheBox](CTF-Writeups/Nibbles-HTB.md) - 15 March 2018
 
