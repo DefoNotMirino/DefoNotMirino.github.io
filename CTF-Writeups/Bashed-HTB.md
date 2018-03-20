@@ -3,6 +3,7 @@
 # Bashed on HackTheBox
 
 
+![htb](http://blog.mullineaux.com.au/content/images/2018/01/17434837_1109794339166352_2979213048164507581_o.png)
 
 
 
@@ -74,12 +75,11 @@ Now we finished by capturing the flag!
 ![7bashed](https://i.imgur.com/mR7HorY.png)
 
 
+## 5. Cleanup
+ 
+Since this is a CTF, cleanup isn’t mandatory.
+However, we want to develop good habits and operational security practice. Meterpreter has a `clearev` command that can be used to cover our tracks - let’s run it and be out of here.
+
+![hacked](https://cdn-images-1.medium.com/max/1600/1*TtuBByJ52bSP-d2WPOczJg.png)
 
 
-
-created file with cat > file.py
-6
-waited 
-
-7 
-rootshell!
